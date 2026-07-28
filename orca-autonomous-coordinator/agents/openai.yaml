@@ -1,0 +1,4 @@
+interface:
+  display_name: "Orca Autonomous Coordinator"
+  short_description: "Safe autonomous multi-agent coordination in Orca"
+  default_prompt: "Use $orca-autonomous-coordinator to coordinate this task across available agents safely and efficiently."
