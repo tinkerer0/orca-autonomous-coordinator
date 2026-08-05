@@ -29,7 +29,14 @@ capabilities, never as a permanent roster.
    project-provided validated ledger command and designated path. When neither exists, use
    append-only JSONL at `work/orchestration/<run-id>/events.jsonl` and keep it out of published
    artifacts. Record ownership, topology, dispatch provenance, attempts, failovers, completion,
-   verification, and exact close/reconciliation evidence.
+   verification, and exact close/reconciliation evidence. Constrain `stage` to run_created,
+   plan_fixed, split_requested, agent_ready, dispatched, first_heartbeat, worker_done,
+   review_done, remediation_done, coordinator_verified, pane_closed, and run_reconciled, plus
+   `other` with a required `meta.stageDetail`; keep version, milestone, and batch labels in
+   `meta`, never in the stage name. Declare run topology in the run's first coordinator-task
+   `plan_fixed` as `meta.topology` — nodes as `role@provider`, edges, and shared exact paths —
+   alongside `implementationCompany` and `verifierCompany`; rewiring appends a new coordinator
+   `plan_fixed`, and the latest wins.
 7. Maintain at most one outstanding blocking wait per coordinator inbox receiver. One wait may
    cover several dispatches; validate every returned `taskId` and `dispatchId`. Treat heartbeat
    and visible activity as liveness, not completion. Apply
@@ -43,7 +50,9 @@ capabilities, never as a permanent roster.
 10. Exit each agent to its surviving outer shell, close owned panes in reverse nesting/open
     order, reconcile exact identities, and preserve protected or unresolved panes.
 11. Report one integrated result with assurance path, topology, task-to-provider mapping,
-    substitutions, evidence, residual risks, user decisions, and observed cleanup counts.
+    substitutions, evidence, residual risks, user decisions, and observed cleanup counts. At
+    run close, append a one-line summary (run id, dates, objective, closing stage) to
+    `work/orchestration/RUNS.md`.
 
 ## Preserve autonomy safely
 

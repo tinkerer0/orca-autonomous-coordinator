@@ -10,6 +10,16 @@ work in worktrees, and cleans up owned worker panes.
 This repository contains coordination instructions and a Codex-compatible skill. It does not
 include or modify Orca itself.
 
+## Updates
+
+- **2026-08-05** — the skill's ledger contract gained a fixed `stage` vocabulary, a run
+  topology declaration (`meta.topology`), and a one-line-per-run `RUNS.md` index (SKILL.md §6,
+  §11). The Korean addendum
+  [`ORCA_GUIDE_UPDATE_2026-08-05.md`](ORCA_GUIDE_UPDATE_2026-08-05.md) explains the
+  measurements behind the change and two policy-layer updates (delegation by judgment, honest
+  reporting norms), and states which parts of this system are hard invariants versus judgment
+  guidance.
+
 ## Easiest installation
 
 Give this folder or its ZIP archive to an LLM with local file access and say:
@@ -62,6 +72,7 @@ README.md
 LICENSE
 00_APPLY_THIS_FIRST.md
 ORCA_AUTONOMOUS_COORDINATION_GUIDE.md
+ORCA_GUIDE_UPDATE_2026-08-05.md
 orca-autonomous-coordinator/
 ├── SKILL.md
 ├── agents/openai.yaml
@@ -97,6 +108,11 @@ An existing Python environment with `PyYAML` may be used instead of `uv`.
 
 Before publishing a modified bundle, also check that it contains no personal paths, credentials,
 project-specific names, run ledgers, or generated work artifacts.
+
+## 기여·피드백
+
+제가 이런 분야를 접한 지 얼마 안 돼서 부족한 점이 많습니다. 고칠 점이나 알려주실 내용이
+있다면 issue나 PR로 남겨주시면 너무 감사하겠습니다.
 
 ## License
 
