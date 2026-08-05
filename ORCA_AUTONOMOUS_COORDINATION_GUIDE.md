@@ -174,6 +174,10 @@ ledger는 local evidence이므로 publish artifact에 섞지 않는다. 최소 �
 Pane title이나 화면상의 이름만으로 ownership을 판단하지 않는다. 사용자가 만든 pane,
 unrelated session, ownership이 불명확한 pane은 protected로 분류한다.
 
+`stage` 어휘(12종 + `other`), run topology 선언(`meta.topology`), run 종료 시 `RUNS.md`
+1줄 인덱스의 정본 계약은 skill `SKILL.md` §6·§11이다. 배경 실측과 예시는
+[`ORCA_GUIDE_UPDATE_2026-08-05.md`](ORCA_GUIDE_UPDATE_2026-08-05.md)를 본다.
+
 ## 7. 자동 장애 대응
 
 장애를 먼저 분류하고 bounded recovery를 적용한다.
