@@ -1,5 +1,16 @@
 # Orca Autonomous Coordinator
 
+Orca에서 한 coordinator가 에이전트의 작업 분담과 독립 검토를 조율하도록 만든 운영 지침.
+
+> **이전 공개판** — 2026-08-05까지 공개한 지침과 설치 예시를 보존합니다. 현재 운영 중인 같은 이름의 스킬과 버전이 다르므로, 아래 문서는 이 공개판을 기준으로 읽어주세요.
+
+[운영 가이드](ORCA_AUTONOMOUS_COORDINATION_GUIDE.md) · [당시 적용 안내](00_APPLY_THIS_FIRST.md) · [스킬 본문](orca-autonomous-coordinator/SKILL.md) · [MIT 라이선스](LICENSE)
+
+<details>
+<summary>당시 사용법과 설계 기록 보기</summary>
+
+아래는 이전 README를 보존한 기록입니다. 사용·설치·검증 상태에 관한 표현도 당시 기준입니다.
+
 A reusable operating policy for letting one user-facing LLM coordinate the other agents
 available in Orca.
 
@@ -117,3 +128,7 @@ project-specific names, run ledgers, or generated work artifacts.
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
+
+</details>
+
+상태 확인: 2026-10-07.
